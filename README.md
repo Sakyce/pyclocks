@@ -1,5 +1,4 @@
-# Clocks
-## A PyGame Framework inspired by Roblox
+# Clocks : A PyGame Framework inspired by Roblox
 ### Still a work in progress
 
 
@@ -21,6 +20,6 @@ Run() # Run the game, right now it's in form of a library
 
 
 ## Coming soon:
-- [] Make it threaded the same way Roblox works
-- [] Serialize Instances into a scene to be loaded
-- [] Scene editor
+[ ] Make it threaded the same way Roblox works
+[ ] Serialize Instances into a scene to be loaded
+[ ] Scene editor
