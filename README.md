@@ -35,6 +35,7 @@ Run()
     - [ ] Sound
     - [ ] Model
     - [ ] Camera
-- [ ] Make it threaded the same way Roblox works
+- [ ] Make it threaded the same way Roblox works and hope for a fair async await syntax
+- [ ] Make scripts executed as modules
 - [ ] Serialize Instances into a scene to be loaded
 - [ ] Scene editor
