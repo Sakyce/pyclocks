@@ -13,13 +13,28 @@ for i in range(6):
     part.Size = Vector2(100,50)
     part.Parent = workspace
 
-PrintTree() # Print the instance tree in the output
-Run() # Run the game, right now it's in form of a library
+PrintTree()
+# Root
+# └─• Workspace
+#     └─• Part 
+#     └─• Part 
+#     └─• Part 
+#     └─• Part 
+#     └─• Part 
+#     └─• Part 
+
+# Run the game, right now it's in form of a library
+Run() 
 ```
 
 
 
 ## Coming soon:
+- [ ] Add more classes
+    - [ ] Finish Part
+    - [ ] Sound
+    - [ ] Model
+    - [ ] Camera
 - [ ] Make it threaded the same way Roblox works
 - [ ] Serialize Instances into a scene to be loaded
 - [ ] Scene editor
