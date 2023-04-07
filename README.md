@@ -33,9 +33,14 @@ Run()
 - [ ] Add more classes
     - [ ] Finish Part
     - [ ] Sound
-    - [ ] Model
+    - [ ] Model & Folder
+    - [ ] Sprite (& probably Humanoid)
     - [ ] Camera
 - [ ] Make it threaded the same way Roblox works and hope for a fair async await syntax
 - [ ] Make scripts executed as modules
 - [ ] Serialize Instances into a scene to be loaded
 - [ ] Scene editor
+
+## Contributing
+At little help doesn't hurt ig, create an issue for any request or bug you find.
+You can also contact me on Discord: `Mélody#2638`
