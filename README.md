@@ -6,6 +6,9 @@
 ```py
 from dynaclocks import *
 
+# Get the Workspace to put our parts in
+workspace = GetService(Workspace)
+
 # Create 6 Parts with a randomized position
 for i in range(6):
     part = Part()
@@ -13,6 +16,7 @@ for i in range(6):
     part.Size = Vector2(100,50)
     part.Parent = workspace
 
+# Print the entire tree
 PrintTree()
 # Root
 # └─• Workspace
