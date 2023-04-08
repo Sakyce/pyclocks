@@ -1,4 +1,4 @@
-# Clocks : A PyGame Framework inspired by Roblox
+# Clocks : A PyGame Framework (And later a game engine) inspired by Roblox
 ### Still a work in progress
 
 

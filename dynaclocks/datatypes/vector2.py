@@ -22,5 +22,12 @@ class Vector2:
         
         return Vector2(randint(x, x2), randint(y, y2))
     
+    @staticmethod
+    def zero():
+        return Vector2()
+
     def __iter__(self):
         return iter([self.X, self.Y])
+    
+    def __repr__(self) -> str:
+        return f"Vector2({self.X},{self.Y})"

@@ -15,6 +15,38 @@ def Run():
 
     workspace = Services.GetService(Workspace)
 
+    class Runner:
+        @staticmethod
+        def Part(inst:Part):
+            rect = pygame.Rect(
+                inst.Position.X,
+                inst.Position.Y,
+                inst.Size.X,
+                inst.Size.Y
+            )
+            c = inst.Color * 255
+            pygame.draw.rect(
+                screen,
+                pygame.Color(*c),
+                rect
+            )
+
+        @staticmethod
+        def Frame(inst:Frame):
+            rect = pygame.Rect(
+                inst.AbsolutePosition.X,
+                inst.AbsolutePosition.Y,
+                inst.AbsoluteSize.X,
+                inst.AbsoluteSize.Y,
+            )
+            c = inst.Color * 255
+            pygame.draw.rect(
+                screen,
+                pygame.Color(*c),
+                rect
+            )
+
+
     running = True
     while running:
         for event in pygame.event.get():
@@ -22,14 +54,7 @@ def Run():
                 running = False
 
         for inst in workspace.GetChildren():
-            if type(inst) == Part:
-                rect = pygame.Rect(
-                    inst.Position.X,
-                    inst.Position.Y,
-                    inst.Size.X,
-                    inst.Size.Y
-                )
-                pygame.draw.rect(screen,"red",rect)
+            getattr(Runner, inst.__class__.__name__, lambda: 0)(inst) # type: ignore
                 
         pygame.display.flip()
         screen.fill("black")

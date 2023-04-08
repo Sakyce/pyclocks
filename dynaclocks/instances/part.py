@@ -1,6 +1,6 @@
 from .instance import Instance
 
-from ..datatypes.vector2 import Vector2
+from ..datatypes import Vector2, Color3
 
 class Part(Instance):
     Position:Vector2
@@ -9,3 +9,4 @@ class Part(Instance):
         super().__init__()
         self.Size = Vector2()
         self.Position = Vector2()
+        self.Color = Color3.black()
