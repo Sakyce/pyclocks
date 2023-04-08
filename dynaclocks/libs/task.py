@@ -1,13 +1,13 @@
+import asyncio
+
 class Task:
     scheduled = []
+    asyncio = asyncio
 
     @staticmethod
     def spawn(function):
-        async def coro():
-            pass
-        Task.scheduled.append(coro())
-        return coro
+        Task.scheduled.append(function)
 
     @staticmethod
-    def wait(time:float):
-        pass
+    async def wait(time:float):
+        await asyncio.sleep(time)

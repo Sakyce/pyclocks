@@ -4,6 +4,8 @@ from .instances.services import service as Services
 from .instances.instance import Instance
 from .instances.part import Part
 
+from .libs import Tasque
+
 import os
 os.environ['PYGAME_HIDE_SUPPORT_PROMPT'] = "hide"
 import pygame
@@ -46,7 +48,6 @@ def Run():
                 rect
             )
 
-
     running = True
     while running:
         for event in pygame.event.get():
@@ -55,7 +56,14 @@ def Run():
 
         for inst in workspace.GetChildren():
             getattr(Runner, inst.__class__.__name__, lambda: 0)(inst) # type: ignore
-                
+        
+        async def coros():
+            for task in Tasque.scheduled:
+                await task
+
+
+        Tasque.asyncio.run(coros())
+
         pygame.display.flip()
         screen.fill("black")
         clock.tick(60)

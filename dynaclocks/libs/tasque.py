@@ -1,0 +1,1 @@
+from .task import Task as Tasque # funny
