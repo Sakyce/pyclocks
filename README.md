@@ -47,4 +47,4 @@ Run()
 
 ## Contributing
 At little help doesn't hurt ig, create an issue for any request or bug you find.
-You can also contact me on Discord: `Mélody#2638`
+You can also contact me on Discord: `Sakyce#2638`
